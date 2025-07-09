@@ -1,22 +1,22 @@
 
-body {
-  margin: 0;
-  font-family: 'Segoe UI', sans-serif;
-  background-color: #FFA500; 
-  color: #333;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  overflow: hidden;
-  box-sizing: border-box;
-}
+  body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #FFA500;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    box-sizing: border-box;
+    padding: 20px;
+  }
 
 .hidden {
   display: none !important;
 }
-
-
 #start-screen {
   display: flex;
   flex-direction: column;
@@ -35,7 +35,6 @@ body {
 #start-screen h1 {
   display: none; 
 }
-
 .button-row {
   margin: 15px 0; 
   width: 100%;
@@ -171,18 +170,19 @@ input[type="checkbox"] {
 
 
 #game {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 25px; 
-  background: #2C3E50; 
-  border-radius: 15px; 
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6); 
-  width: 400px; 
+  width: 100vw; 
+  max-width: 600px;
+  min-width: 320px;
+  margin: 0 auto;
+  padding: 25px;
+  background: #2C3E50;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
+  border: 2px solid #34495E;
   box-sizing: border-box;
-  border: 2px solid #34495E; 
-  position: relative;
+  height: auto;
 }
+
 
 #color-blocks {
   margin-bottom: 25px; 
@@ -226,7 +226,7 @@ input[type="checkbox"] {
 }
 
 #board {
-  width: calc(100% - 20px); 
+  width: calc(110% - 40px); 
   margin: 0 auto 25px auto; 
   padding: 10px; 
   background-color: #34495E; 
@@ -252,14 +252,14 @@ input[type="checkbox"] {
 
 
 .row[data-row="0"] .slots-container {
-  padding-left: 5px; 
+  padding-left: 0px; 
 }
 
 
 .row[data-row].active-row {
   background-color: rgba(52, 152, 219, 0.15); 
   border-radius: 8px;
-  padding: 5px 10px; 
+  padding: 5px 0px; 
   box-shadow: 0 0 15px rgba(52, 152, 219, 0.6);
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
@@ -568,7 +568,7 @@ input[type="checkbox"] {
   }
 
   #game {
-      width: 360px; 
+      width: 90vh; 
       padding: 20px;
   }
   .color-row {
@@ -640,8 +640,8 @@ input[type="checkbox"] {
       margin: 10px 0;
   }
   #game {
-      width: 310px; 
-      padding: 15px;
+      width: 90vh; 
+      padding: 20px;
   }
   .color-row {
       gap: 10px; 
@@ -689,3 +689,4 @@ input[type="checkbox"] {
       width: 50px; 
   }
 }
+
